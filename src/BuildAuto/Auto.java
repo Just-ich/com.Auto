@@ -1,3 +1,5 @@
+package BuildAuto;
+
 public class Auto {
 
     public void BuildBMW(){

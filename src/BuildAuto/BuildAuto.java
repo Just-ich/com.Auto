@@ -1,3 +1,5 @@
+package BuildAuto;
+
 public class BuildAuto {
 
     public Auto createAuto(Auto.BuildAutoType type) {

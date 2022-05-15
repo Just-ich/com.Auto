@@ -1,7 +1,8 @@
+package BuildAuto;
+
 import java.util.Scanner;
 
-public class BMW extends Auto implements Build{
-
+public class Mersedes extends Auto implements Build{
 
 
 
@@ -20,15 +21,17 @@ public class BMW extends Auto implements Build{
         }
     }
 
-
     @Override
     public void BuildRama() {
-        System.out.println("Сборка раммы BMW ");
+        System.out.println("Сборка раммы BuildAuto.Mersedes ");
+
     }
 
     @Override
     public void BuildDwigatel() {
-        System.out.println("Сборка двигателя BMW ");
+        System.out.println("Сборка двигателя BuildAuto.Mersedes ");
 
     }
+
+
 }
