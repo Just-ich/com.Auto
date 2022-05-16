@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Passengers {
 
     public void List() {
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
 
     }
     public static class Builder {
@@ -28,7 +28,7 @@ public class Passengers {
                         System.out.println("Введите имя пассажира ");
                         Scanner scanAdd = new Scanner(System.in);
                         String s = scanAdd.nextLine();
-                        newArrayList.add(s);
+
                         List.copyOf(newArrayList);
 
                         break;
