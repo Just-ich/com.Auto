@@ -1,14 +1,32 @@
 package Map;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-//
+
+
 //1) С помощью HashMap посчитать количество использований каждого слова в строке
 //        Пример:
 //        Ввод Current task posted for Java developers developers
 //        Вывод {Java=1, task=1, developers=2, for=1, Current=1, posted=1}
+//        2) Сгенерируете 100 случайных чисел от 1 до 25 и посчитайте сколько раз сгенерировалось каждое число
+//        Пример:
+//        Ввод 1 2 3 1 4 5 5 2 5
+//        Вывод {1=2,2=2,3=1,4=1,5=3}
+//        3)Есть 2 HashMap<Integer,String>, поменять местами значения из 1 и 2 мапы у которых равные ключи, посчитать кол-во замен
+//        Ввод
+//        1 - Hi     2 - If
+//        2 - By	   3 - For
+//        3 - Nice   4 - Else
+//        5 - Ok
+//
+//        Вывод
+//        1 - Hi     2 - By
+//        2 - If     3 - Nice
+//        3 - For    4 - Else
+//        5 - Ok
+//
+//        Было произведено 2 замены
 
 public class Dz2805 {
 

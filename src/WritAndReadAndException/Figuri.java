@@ -1,11 +1,17 @@
-package WritAndRead;
+package WritAndReadAndException;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Figuri {
+    public void Fig() throws IOException {
+
 
 //        // записываем данные в файл
 //        File file1 = new File("P.txt");
@@ -41,18 +47,18 @@ public class Main {
         scanner.close();
 
         //проверяем массив строк на наличие букв и цифр
-        int numberChar=0, numberLine;
+        int numberChar = 0, numberLine;
         for (int j = 0; j < str.length; j++) {                                                 // выбор строки прохода
-                char[] strToArray = str[numberChar].toCharArray();                             // создание массива чаров из строки
-                list.add(str[numberChar]);                                                     // записываем строку в ArrayList
-                for (int k = 0; k < str[0].length(); k++) {                                    // проверяем массив чаров на наличие букв и цифр
-                    if (Character.isLetter(strToArray[k]) || Character.isDigit(strToArray[k])) {   // сама проверка на наличие букв и цифр
-                        numberLine=j+1;
-                        System.out.println("Есть буква, цифра --- номер строки "+numberLine);      // вывод строки в которой есть буква или число
-                        list.remove(str[numberChar]);                                              // удаление строки с буквой или цифрой
-                        break;
-                    }
+            char[] strToArray = str[numberChar].toCharArray();                             // создание массива чаров из строки
+            list.add(str[numberChar]);                                                     // записываем строку в ArrayList
+            for (int k = 0; k < str[0].length(); k++) {                                    // проверяем массив чаров на наличие букв и цифр
+                if (Character.isLetter(strToArray[k]) || Character.isDigit(strToArray[k])) {   // сама проверка на наличие букв и цифр
+                    numberLine = j + 1;
+                    System.out.println("Есть буква, цифра --- номер строки " + numberLine);      // вывод строки в которой есть буква или число
+                    list.remove(str[numberChar]);                                              // удаление строки с буквой или цифрой
+                    break;
                 }
+            }
             numberChar++;
         }
         System.out.println(" ");
@@ -67,49 +73,11 @@ public class Main {
 
         //вызываем метод подсчёта S и P
         int finalLines = lines;
-        int sizeString= str[0].length();
-        MetodiFiguri metodiFiguri=new MetodiFiguri();
+        int sizeString = str[0].length();
+        MetodiFiguri metodiFiguri = new MetodiFiguri();
         metodiFiguri.PloschadAndPerimetr(finalLines, sizeString);
 
         //вызов метода проверки на выпуклость
         metodiFiguri.WipuklNeWipukl(wordsArray);
-
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        String input = "./Resurses/input.txt";
-//        String output = "./Resurses/output.txt";
-//
-//        Read read=new Read();
-//        Write write=new Write();
-//        List<String> list;
-//
-//        try {
-//            list=read.readAll(input);
-//            System.out.println(list);
-//            for (String a: list) {
-//                System.out.println(a.toString().split(","));
-//            }
-//            write.writeAll(output, list);
-//            System.out.println(list);
-//        }catch (SimpleException e){
-//            throw new SimpleException("Exception Main", e);
-//        }
-
