@@ -66,6 +66,7 @@ public class Dz2805 {
         System.out.println(map.entrySet());
     }
 
+
     // ДЗ №3
     public void dz28053() {
         Map<Integer, String> map1 = new HashMap<>();
@@ -75,7 +76,6 @@ public class Dz2805 {
         map1.put(2, "By");
         map1.put(3, "Nice");
         map1.put(5, "Ok");
-
 
         map2.put(2, "If");
         map2.put(3, "For");
