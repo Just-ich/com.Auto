@@ -19,6 +19,4 @@ public class WordConwert {
         System.out.println("Текст после перевода: "+ar);
         return ar;
     }
-
-
 }

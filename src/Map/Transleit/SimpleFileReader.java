@@ -20,7 +20,6 @@ public class SimpleFileReader {
         } catch (IOException e) {
             throw new SimpleException("Error while reading in Simple Reader",e);
         }
-
         return result;
     }
 

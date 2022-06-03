@@ -2,4 +2,3 @@
 Мир World
 кот Cat
 Собака Dog
-Окно Windows

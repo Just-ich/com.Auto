@@ -17,7 +17,5 @@ public class SimpleFileWriter {
         } catch (IOException e){
             throw new SimpleException(e);
         }
-
-
     }
 }
