@@ -1,18 +1,71 @@
 package Map;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import Map.Transleit.*;
+import WritAndReadAndException.Exception.SimpleException;
+
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SimpleException {
 
 
+        SimpleFileReader reader = new SimpleFileReader();
+        SimpleFileParser parser = new SimpleFileParser();
+        SimpleFileValidator valid = new SimpleFileValidator();
+        SimpleFileWriter writer = new SimpleFileWriter();
+        WordConwert wordConwert=new WordConwert();
+
+        String input = "RusWord.txt";
+        String input1 = "Transleit.txt";
+        String output = "OutputText.txt";
+
+        List<String> inputList = reader.readAll(input);     // Cчитываем словарь и записываем в List---inputList
+        List<List<String>> parsedInput = parser.parse(inputList);  // Разбиваем inputList на слова
+        Map<String, String> mapaInput = valid.validate(parsedInput);  // Записываем в Мапу ключь-значение
+
+        //*********************************************************************************************************
+
+        List<String> transleit = reader.readAll(input1);         //Считываем текст для перевода
+        List<String> parsedInput1 = parser.par(transleit);  // Разбиваем текст для перевода
+        List<String> wordConwerter =wordConwert.transleit(parsedInput1, mapaInput) ; // перевод
+
+        //********************************************************************************************************
+        // Результат
+        writer.writeAll(output, wordConwerter);   // Запись резyльтата в файл
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        TreeSettt treeSettt=new TreeSettt(); // Сортирует автоматом
+//        treeSettt.test();
+
+
+
+
+/*     ДЗ за 28.05.22
         Dz2805 dz=new Dz2805();
-        dz.dz28051();
+        //dz.dz28051();
         //dz.dz28052();
-        //dz.dz28053();
-
+        dz.dz28053();
+*/
 
 
 /* Занятие 28,05,22
@@ -60,5 +113,4 @@ public class Main {
 //        }
 //
 */
-    }
-}
+

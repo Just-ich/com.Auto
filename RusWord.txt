@@ -1,0 +1,5 @@
+Привет Hello
+Мир World
+кот Cat
+Собака Dog
+Окно Windows
