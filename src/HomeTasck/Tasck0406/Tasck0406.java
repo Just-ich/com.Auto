@@ -43,6 +43,7 @@ public class Tasck0406 {    public void homeTasck(){
 
     //2)Дано число n, найти кол-во простых чисел в промежутке от n до 2n(не включая их) - Постулат Бертрана
 
+
     int chislo;
     Scanner scanner = new Scanner(System.in);
     System.out.println("Введите число ");
